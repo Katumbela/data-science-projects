@@ -1,3 +1,6 @@
+import moment from 'moment';
+
+
 export default class DateUtils {
 	static convertToDate(date: Date | string): Date {
 		if (!date) return undefined as any
@@ -19,6 +22,11 @@ export default class DateUtils {
 	static getDateTime(date: Date) {
 		return `${this.getDate(date)} ${this.getTime(date)}`
 	}
+	static formatDate = (timestamp: { seconds: number }) => {
+    const date = moment.unix(timestamp.seconds); // Converte o timestamp para um objeto moment
+    return date.format('DD/MM/YYYY HH:mm');
+};
+
 
 	static getDatePt(paramDate: Date) {
 		return this.getDate(paramDate)?.split('-').reverse().join('/').trim()

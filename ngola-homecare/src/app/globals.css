@@ -2,32 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+@font-face {
+  font-family: 'k2d';
+  src: url('/fonts/K2D-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html, body {
+  font-family: 'k2d', sans-serif;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+html {
+  overflow-x: hidden
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.g {
+  color: #0000005e; 
+  
+}
+
+input, select {
+  @apply focus-within:border-primary border-2 outline-none
+}
+
+.text-link {
+  @apply sm:border-b-4 border-white hover:text-primary transition-all hover:border-primary
+}
+ 
+
+.cover {
+  background-size: cover!important;
+}
+
+.z-500 {
+  z-index: 9!important;
+}
+
+.z-600 {
+  z-index: 9999!important;
 }

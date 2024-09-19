@@ -12,16 +12,7 @@ export { capitalize } from './capitalize'
 export { getStatusStyles } from './getStatusColor.utils'
 export { default as useFlowbiteToasts } from './flowBiteToast.utils'
 export { showCustomToast, showErrorToast, showInfoToast, showSuccessToast, showWarningToast } from "./toast.utils"
-export { navigate } from './router-util'
-export { getRandomSponsoredCourse } from './get-random-sponsored-course'
+export { navigate } from './router-util' 
 export {
-    bg_categories,
-    bgs,
-    bgs_courses,
-    cards_number,
-    companies,
-    icons,
-    logos,
-    svgs,
-    users
+    logos
 } from './image-exporter'
