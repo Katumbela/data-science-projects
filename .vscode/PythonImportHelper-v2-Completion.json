@@ -79,7 +79,7 @@
         "kind": 2,
         "importPath": "api.index",
         "description": "api.index",
-        "peekOfCode": "def predict():\n    data = request.json\n    # Certifique-se de que os dados estão na ordem correta conforme o treinamento\n    features = [\n        data['satisfaction_level'],\n        data['last_evaluation'],\n        data['number_project'],\n        data['average_montly_hours'],\n        data['time_spend_company'],\n        data['Work_accident'],",
+        "peekOfCode": "def predict():\n    data = request.json\n    features = [\n        data['satisfaction_level'],\n        data['last_evaluation'],\n        data['number_project'],\n        data['average_montly_hours'],\n        data['time_spend_company'],\n        data['Work_accident'],\n        data['promotion_last_5years'],",
         "detail": "api.index",
         "documentation": {}
     },
@@ -88,7 +88,7 @@
         "kind": 5,
         "importPath": "api.index",
         "description": "api.index",
-        "peekOfCode": "app = Flask(__name__)\nCORS(app)  # Habilitar CORS\n# Carregar o modelo\nmodelo = joblib.load('caminho/para/seu/modelo_de_rotatividade_rh.pkl')\n@app.route('/api/predict', methods=['POST'])\ndef predict():\n    data = request.json\n    # Certifique-se de que os dados estão na ordem correta conforme o treinamento\n    features = [\n        data['satisfaction_level'],",
+        "peekOfCode": "app = Flask(__name__)\nCORS(app)  \n# Carregar o modelo\nmodelo = joblib.load('caminho/para/seu/modelo_de_rotatividade_rh.pkl')\n@app.route('/api/predict', methods=['POST'])\ndef predict():\n    data = request.json\n    features = [\n        data['satisfaction_level'],\n        data['last_evaluation'],",
         "detail": "api.index",
         "documentation": {}
     },
@@ -97,7 +97,7 @@
         "kind": 5,
         "importPath": "api.index",
         "description": "api.index",
-        "peekOfCode": "modelo = joblib.load('caminho/para/seu/modelo_de_rotatividade_rh.pkl')\n@app.route('/api/predict', methods=['POST'])\ndef predict():\n    data = request.json\n    # Certifique-se de que os dados estão na ordem correta conforme o treinamento\n    features = [\n        data['satisfaction_level'],\n        data['last_evaluation'],\n        data['number_project'],\n        data['average_montly_hours'],",
+        "peekOfCode": "modelo = joblib.load('caminho/para/seu/modelo_de_rotatividade_rh.pkl')\n@app.route('/api/predict', methods=['POST'])\ndef predict():\n    data = request.json\n    features = [\n        data['satisfaction_level'],\n        data['last_evaluation'],\n        data['number_project'],\n        data['average_montly_hours'],\n        data['time_spend_company'],",
         "detail": "api.index",
         "documentation": {}
     },
